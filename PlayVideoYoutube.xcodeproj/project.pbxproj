@@ -13,6 +13,10 @@
 		2E38066623C2884400C0E9DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E38066423C2884400C0E9DD /* Main.storyboard */; };
 		2E38066823C2884700C0E9DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E38066723C2884700C0E9DD /* Assets.xcassets */; };
 		2E38066B23C2884700C0E9DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E38066923C2884700C0E9DD /* LaunchScreen.storyboard */; };
+		2E38067523C2889400C0E9DD /* SecondViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E38067423C2889400C0E9DD /* SecondViewController.storyboard */; };
+		2E38067723C288A300C0E9DD /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E38067623C288A300C0E9DD /* SecondViewController.swift */; };
+		2E38067923C28A8900C0E9DD /* extension+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E38067823C28A8900C0E9DD /* extension+UIViewController.swift */; };
+		2E38067C23C2A21B00C0E9DD /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E38067B23C2A21B00C0E9DD /* VideoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		2E38066723C2884700C0E9DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E38066A23C2884700C0E9DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E38066C23C2884700C0E9DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E38067423C2889400C0E9DD /* SecondViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SecondViewController.storyboard; sourceTree = "<group>"; };
+		2E38067623C288A300C0E9DD /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		2E38067823C28A8900C0E9DD /* extension+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extension+UIViewController.swift"; sourceTree = "<group>"; };
+		2E38067B23C2A21B00C0E9DD /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,51 @@
 		2E38065D23C2884400C0E9DD /* PlayVideoYoutube */ = {
 			isa = PBXGroup;
 			children = (
+				2E38067D23C2A6AA00C0E9DD /* VideoView */,
+				2E38067A23C28A9000C0E9DD /* Extension */,
+				2E38067323C2887E00C0E9DD /* SecondViewController */,
+				2E38067223C2886600C0E9DD /* MainViewController */,
 				2E38065E23C2884400C0E9DD /* AppDelegate.swift */,
 				2E38066023C2884400C0E9DD /* SceneDelegate.swift */,
-				2E38066223C2884400C0E9DD /* ViewController.swift */,
-				2E38066423C2884400C0E9DD /* Main.storyboard */,
 				2E38066723C2884700C0E9DD /* Assets.xcassets */,
 				2E38066923C2884700C0E9DD /* LaunchScreen.storyboard */,
 				2E38066C23C2884700C0E9DD /* Info.plist */,
 			);
 			path = PlayVideoYoutube;
+			sourceTree = "<group>";
+		};
+		2E38067223C2886600C0E9DD /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2E38066223C2884400C0E9DD /* ViewController.swift */,
+				2E38066423C2884400C0E9DD /* Main.storyboard */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		2E38067323C2887E00C0E9DD /* SecondViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2E38067423C2889400C0E9DD /* SecondViewController.storyboard */,
+				2E38067623C288A300C0E9DD /* SecondViewController.swift */,
+			);
+			path = SecondViewController;
+			sourceTree = "<group>";
+		};
+		2E38067A23C28A9000C0E9DD /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2E38067823C28A8900C0E9DD /* extension+UIViewController.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		2E38067D23C2A6AA00C0E9DD /* VideoView */ = {
+			isa = PBXGroup;
+			children = (
+				2E38067B23C2A21B00C0E9DD /* VideoView.swift */,
+			);
+			path = VideoView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E38066B23C2884700C0E9DD /* LaunchScreen.storyboard in Resources */,
+				2E38067523C2889400C0E9DD /* SecondViewController.storyboard in Resources */,
 				2E38066823C2884700C0E9DD /* Assets.xcassets in Resources */,
 				2E38066623C2884400C0E9DD /* Main.storyboard in Resources */,
 			);
@@ -138,6 +183,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E38067C23C2A21B00C0E9DD /* VideoView.swift in Sources */,
+				2E38067923C28A8900C0E9DD /* extension+UIViewController.swift in Sources */,
+				2E38067723C288A300C0E9DD /* SecondViewController.swift in Sources */,
 				2E38066323C2884400C0E9DD /* ViewController.swift in Sources */,
 				2E38065F23C2884400C0E9DD /* AppDelegate.swift in Sources */,
 				2E38066123C2884400C0E9DD /* SceneDelegate.swift in Sources */,
