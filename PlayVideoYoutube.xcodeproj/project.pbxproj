@@ -17,6 +17,7 @@
 		2E38067723C288A300C0E9DD /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E38067623C288A300C0E9DD /* SecondViewController.swift */; };
 		2E38067923C28A8900C0E9DD /* extension+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E38067823C28A8900C0E9DD /* extension+UIViewController.swift */; };
 		2E38067C23C2A21B00C0E9DD /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E38067B23C2A21B00C0E9DD /* VideoView.swift */; };
+		2E38067F23C2A9F600C0E9DD /* VideoLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E38067E23C2A9F600C0E9DD /* VideoLauncher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		2E38067623C288A300C0E9DD /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		2E38067823C28A8900C0E9DD /* extension+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extension+UIViewController.swift"; sourceTree = "<group>"; };
 		2E38067B23C2A21B00C0E9DD /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		2E38067E23C2A9F600C0E9DD /* VideoLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoLauncher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				2E38067B23C2A21B00C0E9DD /* VideoView.swift */,
+				2E38067E23C2A9F600C0E9DD /* VideoLauncher.swift */,
 			);
 			path = VideoView;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 				2E38067C23C2A21B00C0E9DD /* VideoView.swift in Sources */,
 				2E38067923C28A8900C0E9DD /* extension+UIViewController.swift in Sources */,
 				2E38067723C288A300C0E9DD /* SecondViewController.swift in Sources */,
+				2E38067F23C2A9F600C0E9DD /* VideoLauncher.swift in Sources */,
 				2E38066323C2884400C0E9DD /* ViewController.swift in Sources */,
 				2E38065F23C2884400C0E9DD /* AppDelegate.swift in Sources */,
 				2E38066123C2884400C0E9DD /* SceneDelegate.swift in Sources */,

@@ -30,18 +30,18 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MQi-O1-yXg" customClass="VideoView" customModule="PlayVideoYoutube" customModuleProvider="target">
-                                        <rect key="frame" x="5" y="35" width="290" height="260"/>
-                                        <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="0.0" y="35" width="300" height="265"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstItem="MQi-O1-yXg" firstAttribute="top" secondItem="1Ng-9G-Gxa" secondAttribute="bottom" constant="5" id="3CJ-VU-7MB"/>
-                                    <constraint firstItem="MQi-O1-yXg" firstAttribute="leading" secondItem="RrN-VB-9EK" secondAttribute="leading" constant="5" id="Aqw-kG-HFm"/>
+                                    <constraint firstItem="MQi-O1-yXg" firstAttribute="leading" secondItem="RrN-VB-9EK" secondAttribute="leading" id="Aqw-kG-HFm"/>
                                     <constraint firstAttribute="height" constant="300" id="EPt-ba-uK6"/>
                                     <constraint firstAttribute="width" constant="300" id="ZLN-dm-Yp0"/>
-                                    <constraint firstAttribute="bottom" secondItem="MQi-O1-yXg" secondAttribute="bottom" constant="5" id="agg-fa-WxG"/>
-                                    <constraint firstAttribute="trailing" secondItem="MQi-O1-yXg" secondAttribute="trailing" constant="5" id="bOW-Kr-c5M"/>
+                                    <constraint firstAttribute="bottom" secondItem="MQi-O1-yXg" secondAttribute="bottom" id="agg-fa-WxG"/>
+                                    <constraint firstAttribute="trailing" secondItem="MQi-O1-yXg" secondAttribute="trailing" id="bOW-Kr-c5M"/>
                                     <constraint firstItem="1Ng-9G-Gxa" firstAttribute="top" secondItem="RrN-VB-9EK" secondAttribute="top" id="cnt-TP-Ofo"/>
                                     <constraint firstAttribute="trailing" secondItem="1Ng-9G-Gxa" secondAttribute="trailing" id="n36-vZ-mlo"/>
                                 </constraints>
@@ -55,7 +55,7 @@
                         <viewLayoutGuide key="safeArea" id="98T-BD-BZY"/>
                     </view>
                     <connections>
-                        <outlet property="videoView" destination="MQi-O1-yXg" id="VJu-KA-5J3"/>
+                        <outlet property="myVideoView" destination="MQi-O1-yXg" id="GM5-lf-DC8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kSG-vW-Wcd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
