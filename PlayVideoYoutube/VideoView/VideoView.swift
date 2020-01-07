@@ -19,7 +19,7 @@ class VideoView: UIView {
 
     let controlsContainerView : UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(white: 0, alpha: 1)
+        view.backgroundColor = UIColor(white: 0, alpha: 0)
         return view
     }()
     let activityIndicatorView : UIActivityIndicatorView = {
@@ -62,13 +62,14 @@ class VideoView: UIView {
     
 required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
-    controlsContainerView.frame = bounds
+    
      
 
 }
 
     func configure(url: String) {
-       setupPlayer(url: url)
+        setupPlayer(url: url)
+        controlsContainerView.frame = bounds
         setupTapGesture()
         setupLayout()
     }
@@ -79,19 +80,19 @@ required init?(coder aDecoder: NSCoder) {
         controlsContainerView.addSubview(activityIndicatorView)
         activityIndicatorView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         activityIndicatorView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        
+
         controlsContainerView.addSubview(pausePlayButton)
         pausePlayButton.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         pausePlayButton.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         pausePlayButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
         pausePlayButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        
+
         controlsContainerView.addSubview(videoSlider)
         videoSlider.rightAnchor.constraint(equalTo: rightAnchor,constant: -10).isActive = true
         videoSlider.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         videoSlider.leftAnchor.constraint(equalTo: leftAnchor,constant:  10).isActive = true
         videoSlider.heightAnchor.constraint(equalToConstant: 30).isActive = true
-        
+
         backgroundColor = .black
     }
 
@@ -110,7 +111,7 @@ required init?(coder aDecoder: NSCoder) {
         controlsContainerView.isHidden = controlsContainerViewisHiden
         player?.play()
         player?.addObserver(self, forKeyPath: "currentItem.loadedTimeRanges", options: .new, context: nil)
-            
+
         let interval = CMTime(value: 1, timescale: 2)
         player?.addPeriodicTimeObserver(forInterval: interval, queue: DispatchQueue.main, using: { [weak self](progressTime) in
             let seconds = CMTimeGetSeconds(progressTime)
@@ -131,7 +132,7 @@ required init?(coder aDecoder: NSCoder) {
             //this is when player is ready and rendering frames
             if keyPath == "currentItem.loadedTimeRanges"{
                 activityIndicatorView.stopAnimating()
-                controlsContainerView.backgroundColor = .clear
+//                controlsContainerView.backgroundColor = .clear
                 pausePlayButton.isHidden = false
             }
         }
@@ -144,19 +145,19 @@ required init?(coder aDecoder: NSCoder) {
             player?.play()
             pausePlayButton.setImage(UIImage(named: "pause"), for: .normal)
         }
-        
+
         isPlaying = !isPlaying
     }
     @objc func handlesSliderChange(){
-        
+
         if let duration = player?.currentItem?.duration{
             let totalSeconds = CMTimeGetSeconds(duration)
             let value = Float64(videoSlider.value) * totalSeconds
             let seekTime = CMTime(value: Int64(value), timescale: 1)
             player?.seek(to: seekTime,completionHandler: { (completedSeek) in
-                
+
             })
-        
+
     }
     }
     

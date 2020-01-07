@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RrN-VB-9EK">
-                                <rect key="frame" x="57" y="298" width="300" height="300"/>
+                                <rect key="frame" x="57" y="248" width="300" height="400"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ng-9G-Gxa">
                                         <rect key="frame" x="250" y="0.0" width="50" height="30"/>
@@ -29,16 +29,16 @@
                                             <action selector="closeButton:" destination="CCn-RW-0pD" eventType="touchUpInside" id="oOX-zp-mjl"/>
                                         </connections>
                                     </button>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MQi-O1-yXg" customClass="VideoView" customModule="PlayVideoYoutube" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="35" width="300" height="265"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MQi-O1-yXg">
+                                        <rect key="frame" x="0.0" y="35" width="300" height="365"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstItem="MQi-O1-yXg" firstAttribute="top" secondItem="1Ng-9G-Gxa" secondAttribute="bottom" constant="5" id="3CJ-VU-7MB"/>
                                     <constraint firstItem="MQi-O1-yXg" firstAttribute="leading" secondItem="RrN-VB-9EK" secondAttribute="leading" id="Aqw-kG-HFm"/>
-                                    <constraint firstAttribute="height" constant="300" id="EPt-ba-uK6"/>
+                                    <constraint firstAttribute="height" constant="400" id="EPt-ba-uK6"/>
                                     <constraint firstAttribute="width" constant="300" id="ZLN-dm-Yp0"/>
                                     <constraint firstAttribute="bottom" secondItem="MQi-O1-yXg" secondAttribute="bottom" id="agg-fa-WxG"/>
                                     <constraint firstAttribute="trailing" secondItem="MQi-O1-yXg" secondAttribute="trailing" id="bOW-Kr-c5M"/>
@@ -55,7 +55,8 @@
                         <viewLayoutGuide key="safeArea" id="98T-BD-BZY"/>
                     </view>
                     <connections>
-                        <outlet property="myVideoView" destination="MQi-O1-yXg" id="GM5-lf-DC8"/>
+                        <outlet property="containerHeigthconstraint" destination="EPt-ba-uK6" id="ZnX-qx-kFe"/>
+                        <outlet property="containerView" destination="MQi-O1-yXg" id="GM5-lf-DC8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kSG-vW-Wcd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
